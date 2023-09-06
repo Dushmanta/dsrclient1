@@ -35,7 +35,7 @@
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href='{% static "assets/img/favicon.png" %}'>
         <!-- Title -->
-        <title>BTnumeroVastuWorld -Fix More, Care More</title>
+        <title>BTnumeroVastuWorld -Punch line here for seo</title>
     </head>
 
     <body>
@@ -135,108 +135,25 @@
 												<!-- <li class="nav-item">
 													<a href="services-details.html" class="nav-link">Services Details</a>
 												</li> -->
+
 											</ul>
+											<li class="nav-item">
+											<a href="{% url 'contactus' %}" class="nav-link">Contact</a>
 										</li>
 
-										<li class="nav-item">
-											<a href="#" class="nav-link dropdown-toggle">
-												Shop
-												<i class="bx bx-plus"></i>
-											</a>
-
-											<ul class="dropdown-menu">
-												<li class="nav-item">
-													<a href="{% url 'cart' %}" class="nav-link">Cart</a>
-												</li>
-
-												<!--<li class="nav-item">
-													<a href="checkout.html" class="nav-link">Checkout</a>
-												</li>
-
-												<li class="nav-item">
-													<a href="shop-details.html" class="nav-link">Shop Details</a>
-												</li>-->
-											</ul>
 										</li>
 
-										<li class="nav-item">
-											<a href="#" class="nav-link dropdown-toggle">
-												Booking
-												<i class="bx bx-plus"></i>
-											</a>
 
-											<ul class="dropdown-menu">
-												<li class="nav-item">
-													<a href="#" class="nav-link">Cancel Bookings</a>
-												</li>
 
-												<li class="nav-item">
-													<a href="{% url 'track' %}"  class="nav-link">View Bookings</a>
-												</li>
 
-												<!-- <li class="nav-item">
-													<a href="news-left-sidebar.html" class="nav-link">News Left Sidebar</a>
-												</li>
-
-												<li class="nav-item">
-													<a href="news-right-sidebar.html" class="nav-link">News Right Sidebar</a>
-												</li>
-
-												<li class="nav-item">
-													<a href="news-details.html" class="nav-link">News Details</a>
-												</li> -->
-											</ul>
 										</li>
 
-										<li class="nav-item">
-											<a href="{% url 'pro' %}" class="nav-link">Profile</a>
-										</li>
+
 									</ul>
 									<!-- Start Other Option -->
-									{% if user.is_authenticated %}
-									<div class="others-option">
-										<div class="subscribe">		
-											<a href="{% url 'pro' %}">
-												{{ user.username }}
-											</a>
-									</div>
-									<div class="subscribe">		
-										<a href="{% url 'lgn' %}">
-											Logout
-										</a>
-								</div>
-								{% else %}
-								<div class="others-option">
-									<div class="subscribe">			
-										<a href="{% url 'lgt' %}">
-											Login
-										</a>
-								</div>
-								<div class="subscribe">		
-									<a href="{% url 'reg' %}">
-										Register
-									</a>
-							</div>
-									{% endif %}
 
-										<div class="search-wrap">
-											<div class="other-option">
-												<div class="search-box-item">
-													<i class="search-btn bx bx-search"></i>
-													<i class="close-btn bx bx-x"></i>
-													<div class="search-overlay search-popup">
-														<div class="search-box">
-															<form class="search-form">
-																<input class="search-input" name="search" placeholder="Search" type="text">
-																<button class="search-button" type="submit">
-																	<i class="bx bx-search"></i>
-																</button>
-															</form>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
+
+
 									</div>
 									<!-- End Other Option -->
 								</div>
@@ -379,97 +296,7 @@
 		</div>
 	</div>
 </section>
-<!-- End Facility Area -->
 
-<!-- Start Repair Area -->
-<!-- <section class="repair-area-three pb-70">
-	<div class="container">
-		<div class="section-title">
-			<span>What We Do</span>
-			<h2>Our Repair Services For You</h2>
-			<p>BTnumeroVastuWorld is a one place for all the damaged things to get it all fixed with every day in no time.</p>
-		</div>
-        {% csrf_token %}
-		<div class="row">
-            {% for i in ser %}
-			<div class="col-md-4">
-				<div class="single-repair">
-					<div class="icon">
-						<i class="flaticon-computer"></i> 
-                         <img src='{{i.img_cat.url}}' alt=" "> 
-					</div>
-					<h3>{{i.name_ser}}</h3>
-					<p>{{i.desc_ser}}</p>
-					<a href="serv/{{i.id}}">
-						<i class="flaticon-right-1"></i>
-					</a>
-				</div>
-			</div>
-            {% endfor %} -->
-			<!-- <div class="col-lg-4 col-sm-6">
-				<div class="single-repair">
-					<div class="icon">
-						<i class="flaticon-mac-mini"></i>
-					</div>
-					<h3>Data Recovery</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor accumsan lacus vel facilisis consectetur adipiscing elit, sed do.</p>
-					<a href="services-details.html">
-						<i class="flaticon-right-1"></i>
-					</a>
-				</div>
-			</div>
-			<div class="col-lg-4 col-sm-6">
-				<div class="single-repair">
-					<div class="icon">
-						<i class="flaticon-apple"></i>
-					</div>
-					<h3>Hardware Update</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor accumsan lacus vel facilisis consectetur adipiscing elit, sed do.</p>
-					<a href="services-details.html">
-						<i class="flaticon-right-1"></i>
-					</a>
-				</div>
-			</div>
-			<div class="col-lg-4 col-sm-6">
-				<div class="single-repair">
-					<div class="icon">
-						<i class="flaticon-data"></i>
-					</div>
-					<h3>Electronics Repair</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor accumsan lacus vel facilisis consectetur adipiscing elit, sed do.</p>
-					<a href="services-details.html">
-						<i class="flaticon-right-1"></i>
-					</a>
-				</div>
-			</div>
-			<div class="col-lg-4 col-sm-6">
-				<div class="single-repair">
-					<div class="icon">
-						<i class="flaticon-technical-support"></i>
-					</div>
-					<h3>Mac Repair</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor accumsan lacus vel facilisis consectetur adipiscing elit, sed do.</p>
-					<a href="services-details.html">
-						<i class="flaticon-right-1"></i>
-					</a>
-				</div>
-			</div>
-			<div class="col-lg-4 col-sm-6">
-				<div class="single-repair">
-					<div class="icon">
-						<i class="flaticon-innovation"></i>
-					</div>
-					<h3>Apple iPhone Repair</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor accumsan lacus vel facilisis consectetur adipiscing elit, sed do.</p>
-					<a href="services-details.html">
-						<i class="flaticon-right-1"></i>
-					</a>
-				</div>
-			</div> -->
-		<!-- </div>
-	</div>
-</section> -->
-<!-- End Repair Area -->
 
 <!-- Start How Work Area -->
 <section class="how-work-area pt-100 pb-70">
