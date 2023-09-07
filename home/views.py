@@ -162,8 +162,19 @@ def Contact(request):
         email = request.POST['email']
         uname = request.POST['uname']
         print(phone, content,email)
-        subject = "I am sub"
-        body = 'You have a new message for the  '+'|phone number:-|'+phone+'|content :-|'+content+'|email :-|'+email+'|uname :-|'+uname
+        subject = "Some one try to reach you..."
+        body = """Hi ,
+{} contact you as follows:
+Phone number: {}
+Email: {}
+Message: {}
+best,
+Dushmanta
+""".format(uname,
+           phone,
+           email,
+           content,
+    )
         my_email = ['dushmanta@gmail.com']
         send_mail(subject, body, settings.EMAIL_HOST_USER, my_email, fail_silently=False)
         return redirect('contactus')
